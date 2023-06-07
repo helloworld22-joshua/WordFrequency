@@ -2,7 +2,7 @@
 
 function countWords(ignoreCapitalization, maxWordCount) {
     let text = document.getElementById("input").value;
-    let output =  document.getElementById("output");
+    const output =  document.getElementById("output");
 
     output.innerHTML = "";
 

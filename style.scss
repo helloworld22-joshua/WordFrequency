@@ -9,46 +9,53 @@
 }
 
 html {
-    scroll-behavior: smooth;
     color-scheme: dark light;
 }
 
 body {
-    min-height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
+    min-height: 100%;
 
-    /* & > * {
-        display: block;
-    } */
+    font: {
+        family: 'Courier New', Courier, monospace;
+        size: 1.1rem;
+    }
+}
+
+.text {
+    margin: 1rem;
+    text-align: center;
+}
+
+.box {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: .5rem;
+    outline: transparent;
+
+    &:focus {
+        box-shadow: 0 0 15px #fff;
+    }
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 #input {
-    display: block;
-    width: min(800px, 95%);
-    min-height: 200px;
-    margin: auto;
-    resize: none;
-    padding: 1rem;
-    border-radius: .5rem;
+    width: min(800px, calc(100% - 2rem));
+    height: 50vh;
+    min-height: 25vh;
+    resize: vertical;
 }
 
-.countButton {
-    display: block;
-    margin: auto;
-    padding: 1rem;
-    border-radius: .5rem;
-}
-
-.controls {
-    background-color: red;
-    display: block;
-    width: min(800px, 95%);
-    margin: auto;
-    resize: none;
-    padding: 1rem;
-    border-radius: .5rem;
+p {
+    font: {
+        size: 1.2rem;
+        weight: bold;
+    }
 }
 
 #output {
-    text-align: center;
+    list-style-type: none;
 }
