@@ -1,28 +1,24 @@
-const text = `Hello World Hello World World`;
+"use strict";
 
-// Step 1: Convert the text to lowercase
-const lowercaseText = text.toLowerCase();
+function countWords(ignoreCapitalization, maxWordCount) {
+    let text = document.getElementById("input").value;
+    let output =  document.getElementById("output");
 
-// Step 2: Split the text into an array of words
-const words = lowercaseText.split(/\W+/);
+    output.innerHTML = "";
 
-// Step 3: Create an object to store the frequency count of each word
-const wordFrequency = {};
+    if (ignoreCapitalization) text = text.toLowerCase();
 
-// Step 4: Count the frequency of each word
-for (const word of words) {
-  if (word in wordFrequency) {
-    wordFrequency[word]++;
-  } else {
-    wordFrequency[word] = 1;
-  }
-}
+    const words = text.split(/\W+/);
+    const wordFrequency = {};
 
-// Step 5: Sort the words by frequency in descending order
-const sortedWords = Object.entries(wordFrequency).sort((a, b) => b[1] - a[1]);
+    for (const i of words) {
+        (i in wordFrequency) ? wordFrequency[i]++ : wordFrequency[i] = 1;
+    }
 
-// Step 6: Display the 30 most frequently used words and their frequencies
-const top30Words = sortedWords.slice(0, 30);
-for (const [word, frequency] of top30Words) {
-  console.log(`${word}: ${frequency}`);
+    const sortedWords = Object.entries(wordFrequency).sort((a, b) => b[1] - a[1]);
+    const topWords = sortedWords.slice(0, maxWordCount);
+
+    for (const [word, frequency] of topWords) {
+        output.innerHTML += `<li>${word} (${frequency})</li>`;
+    }
 }

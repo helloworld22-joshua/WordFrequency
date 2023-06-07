@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  /* & > * {
+      display: block;
+  } */
+}
+
+#input {
+  display: block;
+  width: min(800px, 95%);
+  min-height: 200px;
+  margin: auto;
+  resize: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.countButton {
+  display: block;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.controls {
+  background-color: red;
+  display: block;
+  width: min(800px, 95%);
+  margin: auto;
+  resize: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+#output {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

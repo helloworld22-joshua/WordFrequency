@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple JS code that checks for the frequency of words in a text.">
+    <title>WordFrequency</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <textarea id="input" placeholder="Enter text here"></textarea>
+    <div class="controls">
+        <input type="text" inputmode="numeric" name="maxWordCount" pattern="[0-9]+" value="50" required>
+        <label for="maxWordCount">Maximum number of words to be displayed</label>
+        <input type="checkbox" name="ignoreCapitalization">
+        <label for="ignoreCapitalization">Ignore Capitalization</label>
+    </div>
+    <button class="countButton" onclick="countWords(true, 30)">Count</button>
+    <ul id="output"></ul>
+</body>
+</html>
